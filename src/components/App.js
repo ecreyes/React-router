@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Inicio from '../pages/Inicio'
 import Personajes from '../pages/Personajes';
 import About from '../pages/About';
+import Detalle from '../pages/Detalle';
 
 class App extends React.Component {
 	render() {
@@ -14,6 +15,9 @@ class App extends React.Component {
 					<Navbar />
 					<div className="container">
 						<Switch>
+							<Route path="/personajes/:id">
+								<Detalle/>
+							</Route>
 							<Route path="/personajes">
 								<Personajes/>
 							</Route>
